@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -40,6 +42,45 @@ func main() {
 
 	// db.Delete(&user)
 
+	//Isert multiples
+	// db.AutoMigrate(&User{})
+
+	// users := []User{
+	// 	{
+	// 		FirstName: "John",
+	// 		LastName:  "Doe",
+	// 		Email:     "john@doe.com",
+	// 	},
+	// 	{
+	// 		FirstName: "Jane",
+	// 		LastName:  "Smith",
+	// 		Email:     "jane@smith.com",
+	// 	},
+	// 	{
+	// 		FirstName: "Willian",
+	// 		LastName:  "Blake",
+	// 		Email:     "willian@blake.com",
+	// 	},
+	// 	{
+	// 		FirstName: "Bruno",
+	// 		LastName:  "Rondon",
+	// 		Email:     "bruno@rondon.com",
+	// 	},
+	// }
+	// for _, user := range users {
+	// 	db.Create(&user)
+	// }
+
+	// Queryng records
+	// db.AutoMigrate(&User{})
+
+	// user := User{}
+
+	// db.First(&user)
+	// db.Last(&user)
+	// db.Where("last_name", "Smith").First(&user)
+
+	fmt.Println(user)
 }
 
 type User struct {
